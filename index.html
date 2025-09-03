@@ -142,9 +142,27 @@
       </div>
     </div>
   </footer>
+ <!-- Player (same block) -->
+  <div id="musicPlayer" class="fixed bottom-0 left-0 right-0 bg-slate-800 border-t border-slate-700 px-4 py-3 flex items-center gap-4 z-50">
+    <button id="playPauseBtn" class="px-3 py-2 bg-blue-600 rounded text-sm">▶️ Play</button>
+    <div class="flex-1">
+      <div class="w-full">
+        <input id="progressBar" type="range" min="0" max="100" value="0" class="w-full h-2 appearance-none bg-slate-700 rounded-lg">
+      </div>
+      <div class="flex justify-between text-xs text-slate-400 mt-1">
+        <span id="trackTitle">Lagu: Untuk Indonesia</span>
+        <span id="timeDisplay">0:00</span>
+      </div>
+    </div>
+  </div>
+
+  <audio id="bgMusic">
+    <source src="music/lagu.mp3" type="audio/mpeg">
+  </audio>
 
   <script src="/js/tailwind-helpers.js" defer></script>
   <script src="/js/countdown.js" defer></script>
   <script src="/js/main.js" defer></script>
+  <script src="js/player.js" defer></script>
 </body>
 </html>
