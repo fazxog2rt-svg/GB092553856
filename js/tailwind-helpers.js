@@ -1,0 +1,2 @@
+// small helpers used by pages (kept minimal)
+(function(){ document.addEventListener('DOMContentLoaded', ()=>{ const ctas = document.querySelectorAll('#ctaHeader'); ctas.forEach(c=>c.addEventListener('click', ()=>location.href='/pendaftaran.html')); }); })();

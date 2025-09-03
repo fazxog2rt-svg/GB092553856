@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Indonesia Bisa 2025 — Beranda</title>
+  <meta name="description" content="Indonesia Bisa 2025 — Gerakan kolaborasi untuk generasi maju. Daftar sekarang.">
+  <!-- Tailwind CDN (for quick prototype) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#0a66ff"/>
+  <link rel="icon" href="/icons/icon-192.png">
+  <style>
+    /* small extra styles */
+    .glass { background: rgba(255,255,255,0.04); backdrop-filter: blur(6px); }
+    [data-theme="light"] .glass { background: rgba(255,255,255,0.6); }
+  </style>
+</head>
+<body class="antialiased bg-slate-900 text-slate-100" data-theme="dark">
+  <!-- NAV -->
+  <header class="sticky top-0 z-30 bg-transparent backdrop-blur glass border-b border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="/index.html" class="flex items-center gap-2 text-xl font-extrabold">
+        <span class="inline-block w-9 h-9 bg-blue-600 rounded flex items-center justify-center">IB</span>
+        <span>Indonesia<span class="text-blue-400">Bisa</span>2025</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-4">
+        <a href="/index.html" class="px-3 py-1 rounded hover:bg-slate-800">Beranda</a>
+        <a href="/pendaftaran.html" class="px-3 py-1 rounded hover:bg-slate-800">Pendaftaran</a>
+        <a href="/aturan.html" class="px-3 py-1 rounded hover:bg-slate-800">Aturan</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <button id="themeToggle" aria-label="toggle theme" class="px-3 py-1 rounded bg-slate-800 hover:bg-slate-700">🌓</button>
+        <button id="ctaHeader" class="px-3 py-1 rounded bg-blue-600 hover:bg-blue-500 text-white hidden md:inline">Daftar</button>
+        <button id="mobileMenuBtn" class="md:hidden px-2 py-1">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main class="max-w-6xl mx-auto px-4 mt-8">
+    <section class="grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Indonesia <span class="text-blue-400">Bisa</span> 2025</h1>
+        <p class="mt-4 text-slate-300">Gabung gerakan kolaborasi buat generasi yang action—pelatihan, mentorship, dan program berdampak. Gratis & terbuka untuk semua.</p>
+        <div class="mt-6 flex gap-3">
+          <a href="/pendaftaran.html" class="px-5 py-3 bg-blue-600 hover:bg-blue-500 rounded text-white font-semibold">Daftar Sekarang</a>
+          <a href="/aturan.html" class="px-5 py-3 border border-slate-700 rounded text-slate-200">Lihat Aturan</a>
+        </div>
+        <div class="mt-6 flex gap-3 items-center">
+          <div id="countdown" class="flex gap-2"></div>
+          <span class="text-sm text-slate-400">Pendaftaran ditutup 31 Des 2025</span>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-tr from-slate-800 to-slate-700 p-6">
+          <div class="text-right text-sm text-slate-400">Target</div>
+          <div class="mt-4 grid grid-cols-1 gap-3">
+            <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800">
+              <h3 class="font-bold">100K Peserta</h3>
+              <p class="text-sm text-slate-300">Target pendaftaran hingga akhir 2025</p>
+            </div>
+            <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800">
+              <h3 class="font-bold">1.000+ Komunitas</h3>
+              <p class="text-sm text-slate-300">Kolaborasi di berbagai kota</p>
+            </div>
+            <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800">
+              <h3 class="font-bold">50 Program</h3>
+              <p class="text-sm text-slate-300">Program berkala & berdampak</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="mt-12 grid md:grid-cols-3 gap-6">
+      <div class="p-6 bg-slate-800/40 rounded-xl border border-slate-700">
+        <h4 class="font-bold">Network</h4>
+        <p class="text-sm text-slate-300 mt-2">Terhubung dengan mentor & komunitas.</p>
+      </div>
+      <div class="p-6 bg-slate-800/40 rounded-xl border border-slate-700">
+        <h4 class="font-bold">Impact</h4>
+        <p class="text-sm text-slate-300 mt-2">Bikin proyek nyata untuk masyarakat.</p>
+      </div>
+      <div class="p-6 bg-slate-800/40 rounded-xl border border-slate-700">
+        <h4 class="font-bold">Growth</h4>
+        <p class="text-sm text-slate-300 mt-2">Upgrade skill lewat kurikulum terkurasi.</p>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="mt-12">
+      <h3 class="text-2xl font-bold">Testimoni</h3>
+      <div class="mt-4 grid md:grid-cols-3 gap-4">
+        <div class="p-4 rounded-xl bg-slate-800/30 border border-slate-700">
+          <p class="text-slate-300">"Programnya killer. Banyak koneksi, mentor supportive."</p>
+          <div class="mt-3 text-sm text-slate-400">— Andi, Peserta 2024</div>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-800/30 border border-slate-700">
+          <p class="text-slate-300">"Beneran nambah skill dan project nyata."</p>
+          <div class="mt-3 text-sm text-slate-400">— Sari, Mentor</div>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-800/30 border border-slate-700">
+          <p class="text-slate-300">"Proses pendaftarannya gampang dan cepat."</p>
+          <div class="mt-3 text-sm text-slate-400">— Budi, Alumni</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ & CTA -->
+    <section class="mt-12 md:flex md:gap-8">
+      <div class="md:flex-1">
+        <h3 class="text-2xl font-bold">Pertanyaan Umum</h3>
+        <div id="faq" class="mt-4 space-y-3">
+          <details class="p-4 bg-slate-800/30 rounded border border-slate-700">
+            <summary class="font-semibold cursor-pointer">Siapa yang bisa daftar?</summary>
+            <div class="mt-2 text-slate-300">WNI usia 15–35 tahun.</div>
+          </details>
+          <details class="p-4 bg-slate-800/30 rounded border border-slate-700">
+            <summary class="font-semibold cursor-pointer">Apakah berbayar?</summary>
+            <div class="mt-2 text-slate-300">Sebagian besar program gratis.</div>
+          </details>
+        </div>
+      </div>
+      <div class="md:w-96 mt-6 md:mt-0 p-4 rounded-xl bg-slate-800/30 border border-slate-700">
+        <h4 class="font-bold">Siap gabung?</h4>
+        <p class="text-sm text-slate-300 mt-2">Klik tombol daftar untuk isi form.</p>
+        <a href="/pendaftaran.html" class="inline-block mt-4 px-4 py-2 bg-blue-600 rounded text-white">Daftar Sekarang</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="mt-16 border-t border-slate-800 py-6">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="text-sm text-slate-400">&copy; <span id="year"></span> Indonesia Bisa 2025</div>
+      <div class="flex gap-3">
+        <button id="shareBtn" class="px-3 py-1 rounded bg-slate-800 hover:bg-slate-700">Share</button>
+        <a href="/pendaftaran.html" class="px-3 py-1 rounded bg-blue-600 text-white">Daftar</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/tailwind-helpers.js" defer></script>
+  <script src="/js/countdown.js" defer></script>
+  <script src="/js/main.js" defer></script>
+</body>
+</html>
