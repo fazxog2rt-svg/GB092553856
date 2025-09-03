@@ -34,5 +34,53 @@
     }
     update();
     setInterval(update, 1000);
+    document.addEventListener("DOMContentLoaded", () => {
+  // Daftar lagu
+  const songs = {
+    "Untuk Indonesia": "/audio/untuk-indonesia.mp3",
+    "Lagu Semangat": "/audio/semangat.mp3"
+  };
+
+  let audio = new Audio();
+  audio.loop = true;
+  audio.volume = 0.5;
+
+  // Kontainer kontrol
+  const controls = document.createElement("div");
+  controls.className = "fixed bottom-4 right-4 bg-slate-800 text-slate-100 p-3 rounded-lg shadow-lg flex flex-col gap-2";
+
+  // Dropdown pilih lagu
+  const select = document.createElement("select");
+  select.className = "bg-slate-700 p-1 rounded";
+  for (let title in songs) {
+    const option = document.createElement("option");
+    option.value = songs[title];
+    option.textContent = title;
+    select.appendChild(option);
+  }
+
+  // Tombol Play / Pause
+  const playBtn = document.createElement("button");
+  playBtn.innerText = "▶️ Play";
+  playBtn.className = "px-2 py-1 bg-green-600 rounded";
+
+  const pauseBtn = document.createElement("button");
+  pauseBtn.innerText = "⏸️ Pause";
+  pauseBtn.className = "px-2 py-1 bg-red-600 rounded";
+
+  // Event
+  playBtn.addEventListener("click", () => {
+    audio.src = select.value;
+    audio.play();
+  });
+  pauseBtn.addEventListener("click", () => audio.pause());
+
+  // Gabungkan
+  controls.appendChild(select);
+  controls.appendChild(playBtn);
+  controls.appendChild(pauseBtn);
+  document.body.appendChild(controls);
+});
+
   });
 })();
