@@ -1,37 +1,77 @@
 <!doctype html>
 <html lang="id">
 <head>
-  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Aturan — Indonesia Bisa 2025</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="manifest" href="/manifest.json">
   <link rel="icon" href="/icons/icon-192.png">
 </head>
 <body class="bg-slate-900 text-slate-100 antialiased">
+  <!-- Header -->
   <header class="py-4 border-b border-slate-800">
     <div class="max-w-4xl mx-auto px-4 flex justify-between items-center">
       <a href="/index.html" class="font-bold">IndonesiaBisa2025</a>
       <a href="/index.html" class="text-sm text-slate-400">Kembali</a>
     </div>
   </header>
+
+  <!-- Main -->
   <main class="max-w-4xl mx-auto px-4 py-8">
     <h1 class="text-2xl font-bold">Aturan & Ketentuan</h1>
-    <input id="faqSearch" placeholder="Cari aturan..." class="mt-4 w-full px-3 py-2 rounded bg-slate-800 border border-slate-700" />
+    <input id="faqSearch" placeholder="Cari aturan..." 
+           class="mt-4 w-full px-3 py-2 rounded bg-slate-800 border border-slate-700" />
+
     <div id="faq" class="mt-4 space-y-3">
+
+      <!-- Aturan Umum Peserta -->
       <details class="p-4 bg-slate-800/30 rounded border border-slate-700" open>
-        <summary class="font-semibold cursor-pointer">Pendaftaran & Kelayakan</summary>
-        <div class="mt-2">Peserta WNI usia 15–35 tahun. Komitmen mengikuti program.</div>
+        <summary class="font-semibold cursor-pointer">Aturan Umum Peserta</summary>
+        <div class="mt-2 space-y-1 text-slate-300">
+          <p>Peserta wajib hadir tepat waktu sesuai jadwal yang telah ditentukan.</p>
+          <p>Peserta wajib menggunakan pakaian yang sopan.</p>
+          <p>Peserta yang berhijab diperbolehkan, dengan ketentuan hijab aman & tidak mengganggu jalannya pertandingan.</p>
+          <p>Peserta dilarang membawa barang terlarang (narkoba, senjata tajam, minuman keras).</p>
+        </div>
       </details>
+
+      <!-- Aturan Khusus Pertandingan -->
       <details class="p-4 bg-slate-800/30 rounded border border-slate-700">
-        <summary class="font-semibold cursor-pointer">Timeline & Jadwal</summary>
-        <div class="mt-2">Pendaftaran mengacu pada countdown di beranda. Info lanjutan via email.</div>
+        <summary class="font-semibold cursor-pointer">Aturan Khusus Pertandingan</summary>
+        <div class="mt-2 space-y-1 text-slate-300">
+          <p>Durasi pertandingan: 10 menit per ronde.</p>
+          <p>Sistem pertandingan menggunakan gugur (knockout).</p>
+          <p>Keputusan juri bersifat mutlak & tidak bisa diganggu gugat.</p>
+          <p>Pelanggaran berat → langsung diskualifikasi.</p>
+        </div>
       </details>
+
+      <!-- Perlengkapan & Keselamatan -->
       <details class="p-4 bg-slate-800/30 rounded border border-slate-700">
-        <summary class="font-semibold cursor-pointer">Privasi</summary>
-        <div class="mt-2">Data disimpan aman dan tidak dibagikan tanpa izin.</div>
+        <summary class="font-semibold cursor-pointer">Perlengkapan & Keselamatan</summary>
+        <div class="mt-2 space-y-1 text-slate-300">
+          <p>Peserta wajib menggunakan perlengkapan resmi yang ditentukan panitia.</p>
+          <p>Dilarang menggunakan alat bantu tambahan tanpa izin panitia.</p>
+          <p>Hijab peserta disarankan berbahan ringan & aman untuk menghindari risiko cedera.</p>
+          <p>Panitia berhak menghentikan pertandingan demi keselamatan.</p>
+        </div>
       </details>
+
+      <!-- Sanksi Pelanggaran -->
+      <details class="p-4 bg-slate-800/30 rounded border border-slate-700">
+        <summary class="font-semibold cursor-pointer">Sanksi Pelanggaran</summary>
+        <div class="mt-2 space-y-1 text-slate-300">
+          <p>Pelanggaran ringan: Teguran lisan.</p>
+          <p>Pelanggaran sedang: Pengurangan poin.</p>
+          <p>Pelanggaran berat: Diskualifikasi.</p>
+        </div>
+      </details>
+
     </div>
   </main>
+
+  <!-- Scripts -->
   <script src="/js/accordion.js" defer></script>
   <script src="/js/main.js" defer></script>
 </body>
